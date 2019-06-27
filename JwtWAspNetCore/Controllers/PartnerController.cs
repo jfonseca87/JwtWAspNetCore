@@ -4,9 +4,11 @@
     using System.Net;
     using JwtWAspNetCore.Domain;
     using JwtWAspNetCore.Services.Interfaces;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
+    [Authorize]
     public class PartnerController : ControllerBase
     {
         private readonly IPartnerRepository partnerRepository;
